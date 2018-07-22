@@ -14,8 +14,7 @@ public class AttendeeController {
 	private RosterClient attendeeClient;
 	private CompanyClient companyClient;
 	
-	@Autowired
-	public AttendeeController(RosterClient attendeeClient, CompanyClient companyClient) {
+	public AttendeeController(@Autowired RosterClient attendeeClient, @Autowired(required=false) CompanyClient companyClient) {
 		this.attendeeClient = attendeeClient;
 		this.companyClient = companyClient;
 	}
